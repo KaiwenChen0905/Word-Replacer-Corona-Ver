@@ -1,25 +1,27 @@
-function setup() {
-   noCanvas();
-   let userinput = select('#userinput');
-   userinput.input(newText);
-}
+alert('Open the Extension Pop-Up screen to replace the words you don not want to see!');
 
-var everything = document.getElementsByTagName("body");
-console.log('word redactor extension running');
+chrome.runtime.onMessage.addListener(
+  function(request, sender, senderResponse){
 
-for (var i = 0; i < everything.length; i++) {
+    alert('receiving');
 
-  var txt = everything[i].innerHTML;
+    var everything = document.getElementsByTagName("body");
 
-  var tokens = txt.split(/(<.*?>)/);
-  for (var j = 0; j < tokens.length; j++) {
+    console.log('word redactor extension running');
 
-    if (tokens[j].charAt(0) !== '<') {
-      tokens[j] = tokens[j].replace(/\bchina-virus\b/gi,'<span class="redact">trump-virus</span>');
-      tokens[j] = tokens[j].replace(/\bchinavirus\b/gi,'<span class="redact">trumpvirus</span>');
-      tokens[j] = tokens[j].replace(/\bcoronavirus\b/gi,'<span class="redact">trumpvirus</span>');
+    for (var i = 0; i < everything.length; i++) {
+
+      var txt = everything[i].innerHTML;
+
+      var tokens = txt.split(/(<.*?>)/);
+
+    for (var j = 0; j < tokens.length; j++) {
+
+      if (tokens[j].charAt(0) !== '<') {
+      tokens[j] = tokens[j].replace((new RegExp(request.userinput, "gi")),'<span class="redact">hahaha</span>');
     }
   }
 
   everything[i].innerHTML = tokens.join('');
-}
+   }
+});
