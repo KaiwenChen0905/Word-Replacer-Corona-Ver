@@ -1,0 +1,1 @@
+# Word-Replacer-Corona-Ver.
