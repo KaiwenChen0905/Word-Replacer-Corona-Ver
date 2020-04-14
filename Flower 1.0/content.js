@@ -18,7 +18,7 @@ chrome.runtime.onMessage.addListener(
     for (var j = 0; j < tokens.length; j++) {
 
       if (tokens[j].charAt(0) !== '<') {
-      tokens[j] = tokens[j].replace((new RegExp(request.userinput, "gi")),'<span class="redact">hahaha</span>');
+      tokens[j] = tokens[j].replace((new RegExp(request.userinput, "gi")),'<span class="redact">🌼🌻💐🌹🌷</span>');
     }
   }
 
