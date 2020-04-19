@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Spartan', cursive;
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+ background-color: floralwhite;
+ font-family: "Spartan";
+}
+
+h1{
+  font-family: "Spartan";
+  font-weight: 2400;
+  color:peachpuff;
+  font-size: 20;
+}
+
+h4{
+  font-family: "Spartan";
+  font-size: 6;
+  color: forestgreen;
+}
+
+h5{
+  font-family: "Spartan";
+  font-size: 6;
+  color: mediumseagreen;
+}
+
+h6{
+  font-family: "Spartan";
+  font-size: 6;
+  color: darkseagreen;
+}
