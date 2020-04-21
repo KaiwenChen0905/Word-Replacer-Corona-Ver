@@ -1,1 +1,1 @@
-# Word-Replacer-Corona-Ver.
+# A google extension designed by Kevin Chen
